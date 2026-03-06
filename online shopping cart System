@@ -1,0 +1,41 @@
+#this system cart is done using list defining function and calling function at the end
+def add_product(l1):
+        l1.append("Mango")
+        l1.append("Milk")
+        l1.append("bread")
+        l1.append("butter")
+        l1.append("Eggs")
+        l1.append("chicken")
+        l1.append("goat")
+        l1.append("spinach")
+        print("The products to be added are: ")
+        print(l1)
+        return "products are added"
+def remove_products(l1):
+        l1.remove("goat")
+        l1.remove("spinach")
+        l1.remove("butter")
+        print("The products to be removed are: ")
+        print(l1)
+        return "products are removed"
+def show_total_items(l1):
+    total=0
+    for i in l1:
+        total += 1
+    print("The total items: ")
+    print(total)
+    return "the items are totaled"
+def search_product(l1):
+    i  = input("Enter the product: ")
+    if i in l1:
+        print(i)
+        return "item is present"
+    else:
+         return "item is not present"
+
+l1 = []
+print(add_product(l1))
+print(remove_products(l1))
+print(show_total_items(l1))
+print(search_product(l1))
+print(l1)
