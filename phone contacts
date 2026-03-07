@@ -1,0 +1,67 @@
+contacts = {} #for storing contacts
+#adding new contact
+def add_contact(name:str, mobile:int):
+    if name not in contacts:
+        contacts[name] = mobile
+        return "contact saved"
+    return "contact name already exists, chesk with another name"
+
+#update contact
+def update_contact(name:str, mobile:int): 
+    if name in contacts:
+        contacts[name] = mobile
+        return "contact saved"
+    return "contact name not exists, check name again"
+
+#delete contact
+def delete_contact(name:str):
+    if name in contacts:
+        contacts.pop(name)
+        return "contact deleted..."
+    return "contact name not exists, check again..."
+
+#get mobile number by searching name
+def get_mobile_number(name:str):
+    if name in contacts:
+        return contacts[name]
+    return "the number is received..."
+
+#all contacts
+def all_contacts():
+    return contacts    
+
+#main
+if __name__=="__main__":
+    print("Welcome to the conatcts management")
+    while(True):
+        print("Select your operatoin \n 1>Add contact \n 2.Update contact \n 3.Delete contact \n 4.Search mobile number by name \n 5.see all contacts \n 6.Exit")
+        choice = int(input("Enter your choice: "))
+        if(choice==1):
+            print("1.add contacts")
+            name = input("Enter the name: ").strip()
+            number = int(input("Enter the number: "))
+            res = add_contact(name=name, mobile=number)
+            print(res)
+        elif(choice==2):
+            print("2.update contacts")
+            name = input("Enter the name: ").strip()
+            number = int(input("Enter the number: "))
+            res = update_contact(name=name, mobile=number)
+            print(res)
+        elif(choice==3):
+            print("3.Delete contacts")
+            name = input("Enter the name: ").strip()
+            number = int(input("Enter the number: "))
+            res = delete_contact(name=name)
+            print(res)
+        elif(choice==4):
+            print("4.get contact number")
+            name = input("Enter the name: ").strip()
+            res = get_mobile_number(name=name,mobile=number)
+            print(res)
+        elif(choice==5):
+            print("5.all contacts")
+            print(all_contacts())
+
+        else:
+            print("invalid number and name")
