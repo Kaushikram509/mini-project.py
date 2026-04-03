@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Portal Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Job Portal Dashboard</h1>
+
+<div class="container">
+
+    <!-- FILTER SECTION -->
+    <div class="filters">
+        <h2>Filters</h2>
+
+        <input type="text" id="search" placeholder="Search job title...">
+
+        <select id="locationFilter">
+            <option value="">All Locations</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Pune">Pune</option>
+        </select>
+
+        <select id="typeFilter">
+            <option value="">All Types</option>
+            <option value="Full-Time">Full-Time</option>
+            <option value="Internship">Internship</option>
+        </select>
+    </div>
+
+    <!-- JOB LIST -->
+    <div class="jobs-section">
+        <h2>Available Jobs</h2>
+        <div id="jobList"></div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="dashboard">
+        <h2>Dashboard</h2>
+        <p>Total Jobs: <span id="totalJobs">0</span></p>
+        <p>Full-Time: <span id="fullTimeCount">0</span></p>
+        <p>Internships: <span id="internCount">0</span></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
